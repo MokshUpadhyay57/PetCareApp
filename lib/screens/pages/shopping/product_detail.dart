@@ -60,7 +60,7 @@ class _ProductDetailState extends State<ProductDetail> {
     if (cart.docs.isNotEmpty) {
       final cartdocs = cart.docs.first;
       final curQty = cartdocs['Quantity'] as int;
-      final curTotalPrice = cartdocs['Total_Price'] as int;
+      final curTotalPrice = cartdocs['Total_Price'] as double;
 
       cartdocs.reference.update({'Quantity': curQty + qty, 'Total_Price': curTotalPrice + tprice});
     } else {
@@ -133,7 +133,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   image: widget.pd.imageurl,
                   qty: quantity,
                   price: widget.pd.price,
-                  tprice: totalPrice,
+                  tprice: totalPrice.toDouble(),
                 );
 
                 Navigator.push(
@@ -198,7 +198,7 @@ class _ProductDetailState extends State<ProductDetail> {
                     borderRadius: BorderRadius.circular(15),
                     image: DecorationImage(
                       image: NetworkImage(widget.pd.imageurl),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                     // child: CachedNetworkImage(imageUrl: widget.pd.imageurl,
                     // imageBuilder: (context, imageProvider) {
@@ -238,7 +238,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          'Rs ${widget.pd.price}',
+                          'Rs ${widget.pd.price.toStringAsFixed(2)}',
                           style: TextStyle(
                             color: Colors.grey.shade500,
                             fontSize: 16,
@@ -267,7 +267,7 @@ class _ProductDetailState extends State<ProductDetail> {
                             ),
                             const SizedBox(width: 10),
                             Text(
-                              'Rs $totalPrice',
+                              'Rs ${totalPrice.toStringAsFixed(2)}',
                               style: TextStyle(
                                 color: Colors.grey.shade500,
                                 fontSize: 16,

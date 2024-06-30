@@ -6,39 +6,40 @@ import 'vetCenterList.dart';
 class Home extends StatelessWidget {
   const Home({super.key});
 
-  
   void _navigateToVetCenter(BuildContext context) {
     // Add code to navigate to Feedback screen
     Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('Vet Center'),
-        ),
-        body: const Center(
-          child: Text('This is the Vet Center screen'),
-        ),
+      context,
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          appBar: AppBar(
+            title: const Text('Vet Center'),
+          ),
+          body: const Center(
+            child: Text('This is the Vet Center screen'),
+          ),
         ),
       ),
     );
   }
+
   void _navigateToBlogs(BuildContext context) {
     // Add code to navigate to Feedback screen
     Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('Blogs'),
-        ),
-        body: const Center(
-          child: Text('This is the Blogs screen'),
-        ),
+      context,
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          appBar: AppBar(
+            title: const Text('Blogs'),
+          ),
+          body: const Center(
+            child: Text('This is the Blogs screen'),
+          ),
         ),
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,9 +54,9 @@ class Home extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
-             Row(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -79,13 +80,13 @@ class Home extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                                  InkWell(
-                    onTap: () => _navigateToBlogs(context),
-                    child: const CircleAvatar(
-                      radius: 50.0,
-                      child: Icon(Icons.article, size: 35.0),
+                    InkWell(
+                      onTap: () => _navigateToBlogs(context),
+                      child: const CircleAvatar(
+                        radius: 50.0,
+                        child: Icon(Icons.article, size: 35.0),
+                      ),
                     ),
-                  ),
                     const SizedBox(height: 10.0),
                     const Text(
                       'Blog Center',

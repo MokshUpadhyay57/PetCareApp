@@ -89,7 +89,7 @@ class _ShoppingState extends State<Shopping> {
           StreamBuilder(
             stream: (selectedCategory == "All") ? FirebaseFirestore.instance.collection('Products').snapshots() : FirebaseFirestore.instance.collection('Products').where("Category", isEqualTo: selectedCategory).snapshots(),
             builder: (context, snapshot) {
-              if (snapshot.hasError) {
+              if (snapshot.connectionState == ConnectionState.none) {
                 return const Text("Connection Error");
               }
 
@@ -121,7 +121,7 @@ class _ShoppingState extends State<Shopping> {
                       crossAxisCount: 2, // Adjust the number of columns as needed
                       crossAxisSpacing: 7.0, // Add spaqcing between columns
                       mainAxisSpacing: 7.0, // Add spacing between rows
-                      childAspectRatio: (MediaQuery.of(context).size.width / MediaQuery.of(context).size.height) / 0.6,
+                      childAspectRatio: (MediaQuery.of(context).size.width / MediaQuery.of(context).size.height) / 0.79,
                     ),
                     itemCount: products.length,
                     itemBuilder: (context, index) {

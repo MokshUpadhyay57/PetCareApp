@@ -31,8 +31,9 @@ class ProductCard extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     double imageHeight = screenHeight * 0.2;
     return Card(
-      color: Theme.of(context).brightness == Brightness.dark ? Colors.grey.shade800 : Colors.white,
-      
+      color: Theme.of(context).brightness == Brightness.dark
+          ? Colors.grey.shade800
+          : Colors.white,
       elevation: 5,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
@@ -50,12 +51,10 @@ class ProductCard extends StatelessWidget {
                 pd.imageurl,
                 height: 155,
                 width: double.infinity,
-                
               ),
             ),
           ),
           Container(
-            
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
@@ -67,19 +66,19 @@ class ProductCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 4.0),
                   Text(
-                    'Rs ${pd.price.toStringAsFixed(2)}',
+                    'Rs ${pd.price.toDouble()}',
                     style: const TextStyle(
                       color: Colors.grey,
                     ),
                   ),
-                  Text(
-                    pd.description,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: Colors.grey,
-                    ),
-                  ),
+                  // Text(
+                  //   pd.description,
+                  //   maxLines: 1,
+                  //   overflow: TextOverflow.ellipsis,
+                  //   style: const TextStyle(
+                  //     color: Colors.grey,
+                  //   ),
+                  // ),
                   const SizedBox(height: 8.0),
                   GestureDetector(
                     onTap: () {
@@ -97,11 +96,14 @@ class ProductCard extends StatelessWidget {
                       height: 26,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: Theme.of(context).brightness == Brightness.dark ? Colors.orange.shade600 : Colors.blue,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.orange.shade600
+                            : Colors.blue,
                       ),
                       child: Text(
                         "Add to Cart",
-                        style: TextStyle(fontSize: MediaQuery.of(context).size.width / 25),
+                        style: TextStyle(
+                            fontSize: MediaQuery.of(context).size.width / 25),
                       ),
                     ),
                   ),
