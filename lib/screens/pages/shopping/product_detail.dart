@@ -227,7 +227,7 @@ class _ProductDetailState extends State<ProductDetail> {
                           ),
                         ),
                         SmoothStarRating(
-                          rating: widget.pd.rating as double,
+                          rating: widget.pd.rating,
                           size: 18,
                           color: Theme.of(context).brightness == Brightness.dark ? Colors.orange.shade300 : Colors.blue,
                           filledIconData: Icons.star_rate,

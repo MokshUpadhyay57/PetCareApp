@@ -113,7 +113,7 @@ class _MapScreenState extends State<MapScreen> {
     getMarkerData();
   }
 
-  int _selectedIndex = 0; // initialize the selected index to 0
+  final int _selectedIndex = 0; // initialize the selected index to 0
 
   @override
   Widget build(BuildContext context) {

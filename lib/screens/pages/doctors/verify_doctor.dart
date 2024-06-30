@@ -47,8 +47,8 @@ class _VerifyDoctorButtonState extends State<VerifyDoctorButton> {
     return ElevatedButton(
       onPressed: _isSaving ? null : _toggleVerification,
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
+        backgroundColor: WidgetStateProperty.resolveWith<Color>(
+          (Set<WidgetState> states) {
             if (_isVerified) {
               return Colors.green;
             } else {

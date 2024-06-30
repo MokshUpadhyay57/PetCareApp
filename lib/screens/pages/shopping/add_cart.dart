@@ -279,7 +279,7 @@ class AddtoCart extends StatelessWidget {
                       // margin: const EdgeInsets.only(bottom: 5),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Theme.of(context).brightness == Brightness.dark ? Colors.brown.shade400 : Color.fromARGB(255, 35, 77, 111),
+                        color: Theme.of(context).brightness == Brightness.dark ? Colors.brown.shade400 : const Color.fromARGB(255, 35, 77, 111),
                       ),
                       alignment: Alignment.center,
                       child: const Text(

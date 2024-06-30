@@ -152,8 +152,8 @@ class _ScheduleState extends State<Schedule> {
                                   // Handle the dropdown menu tap action
                                 },
                                 style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all<Color>(const Color(0xff8acaca)),
-                                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                  backgroundColor: WidgetStateProperty.all<Color>(const Color(0xff8acaca)),
+                                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(16 * fem),
                                     ),

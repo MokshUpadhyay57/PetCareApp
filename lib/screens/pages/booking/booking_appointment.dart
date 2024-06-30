@@ -45,7 +45,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
               return const Text('Doctor not found.');
             }
 
-            return Container(
+            return SizedBox(
               // padding: EdgeInsets.fromLTRB(0 * fem, 18 * fem, 0 * fem, 0 * fem),
               width: double.infinity,
 

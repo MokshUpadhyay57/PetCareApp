@@ -7,7 +7,7 @@ import 'package:pet_care/screens/pages/schedule/schedule.dart';
 import 'package:pet_care/screens/pages/doctors/vet_list.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();

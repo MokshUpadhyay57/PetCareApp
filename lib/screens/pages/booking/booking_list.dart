@@ -214,11 +214,11 @@ class _BookingListState extends State<BookingList> {
       },
       style: ButtonStyle(
         backgroundColor: isSelected
-            ? MaterialStateProperty.all<Color>(
+            ? WidgetStateProperty.all<Color>(
                 Theme.of(context).brightness == Brightness.dark ? Colors.orange.shade400 : Colors.blue,
               )
             : null,
-        foregroundColor: MaterialStateProperty.all<Color>(
+        foregroundColor: WidgetStateProperty.all<Color>(
           Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
         ),
       ),

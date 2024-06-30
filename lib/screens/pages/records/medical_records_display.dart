@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MedicalRecordsDisplay extends StatelessWidget {
   final List<Map<String, dynamic>> records;
 
-  const MedicalRecordsDisplay({Key? key, required this.records}) : super(key: key);
+  const MedicalRecordsDisplay({super.key, required this.records});
 
   @override
   Widget build(BuildContext context) {

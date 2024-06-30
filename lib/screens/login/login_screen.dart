@@ -288,7 +288,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   );
                 },
                 child: Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   margin: const EdgeInsets.symmetric(horizontal: 25),
                   decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark ? Colors.blue.shade400 : Colors.blue,

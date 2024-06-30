@@ -95,7 +95,7 @@ class _InformationPageState extends State<InformationPage> with TickerProviderSt
     return scroll;
   }
 
-  int _selectedIndex = 0; // initialize the selected index to 0
+  final int _selectedIndex = 0; // initialize the selected index to 0
 
   final String userId = FirebaseAuth.instance.currentUser?.uid ?? '';
 
